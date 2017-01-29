@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Passport Demo</title>
+    </head>
+    <body>
+        <% var authString;%>
+        <%if(authenticated){%>
+            <% authString = "You are authenticated !" %>
+        <%}else{%>
+            <% authString = `You are not signed in and this route is an unProtected route. Signin or login  This will message will change after you log in` %>
+        <%}%>
+        <%= authString%>
+        <br>
+        <a href="/signUp">Signup here to save user to DB</a>
+        <br>
+        <a href="/login">Login to get session for user.</a>
+        <br>
+        <hr>
+
+        Sample routes
+        <br>
+        <a href = "/unProtected">The unprotected route</a> You can access this page and receive no errors when not logged in
+        <br>
+        <a href = "/protected">The protected route</a> (This will produce a 401 when not logged in)
+    </body>
+</html>
