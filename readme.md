@@ -1,10 +1,12 @@
 ## Show set up for passport
-##Set up for an express app with mongo connection using mongoose.
 
-###In this example you can send data to the server from a form in the browser and save it to the database
+###In this example you can send data to the server from a `form` in the browser and save it to the database
+###We use passport.js for user authentication
 
 `http://localhost:3000/` link to forms.
+
 `http://localhost:3000/signUp` is where you insert data to create a user to save the database
+
 `http://localhost:3000/login` is where you login and where passport takes over.
 
 `http://localhost:3000/unProtected` this route doesn't have a req.isAuthenticated() check. So it will display user info but anybody can see the info
